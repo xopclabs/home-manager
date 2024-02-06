@@ -4,6 +4,11 @@ let
 
   lib = import ../modules/lib/stdlib-extended.nix pkgs.lib;
 
+  nmtSrc = fetchTarball {
+    url = "https://git.sr.ht/~rycee/nmt/archive/v0.5.1.tar.gz";
+    sha256 = "0qhn7nnwdwzh910ss78ga2d00v42b0lspfd7ybl61mpfgz3lmdcj";
+  };
+
   modules = import ../modules/modules.nix {
     inherit lib pkgs;
     check = false;
@@ -33,7 +38,7 @@ let
   isDarwin = pkgs.stdenv.hostPlatform.isDarwin;
   isLinux = pkgs.stdenv.hostPlatform.isLinux;
 
-in import pkgs.nix-lib-nmt {
+in import nmtSrc {
   inherit lib pkgs modules;
   testedAttrPath = [ "home" "activationPackage" ];
   tests = builtins.foldl' (a: b: a // (import b)) { } ([
@@ -96,6 +101,7 @@ in import pkgs.nix-lib-nmt {
     ./modules/programs/man
     ./modules/programs/mbsync
     ./modules/programs/micro
+    ./modules/programs/mise
     ./modules/programs/mpv
     ./modules/programs/mu
     ./modules/programs/mujmap
@@ -123,7 +129,6 @@ in import pkgs.nix-lib-nmt {
     ./modules/programs/readline
     ./modules/programs/rio
     ./modules/programs/ripgrep
-    ./modules/programs/rtx
     ./modules/programs/ruff
     ./modules/programs/sagemath
     ./modules/programs/sapling
@@ -135,6 +140,7 @@ in import pkgs.nix-lib-nmt {
     ./modules/programs/ssh
     ./modules/programs/starship
     ./modules/programs/taskwarrior
+    ./modules/programs/tealdeer
     ./modules/programs/texlive
     ./modules/programs/thefuck
     ./modules/programs/tmate
@@ -155,6 +161,7 @@ in import pkgs.nix-lib-nmt {
     ./modules/launchd
     ./modules/services/git-sync-darwin
     ./modules/services/imapnotify-darwin
+    ./modules/services/nix-gc-darwin
     ./modules/targets-darwin
   ] ++ lib.optionals isLinux [
     ./modules/config/i18n
@@ -228,6 +235,7 @@ in import pkgs.nix-lib-nmt {
     ./modules/services/mpd
     ./modules/services/mpd-mpris
     ./modules/services/mpdris2
+    ./modules/services/nix-gc
     ./modules/services/osmscout-server
     ./modules/services/pantalaimon
     ./modules/services/parcellite
@@ -255,6 +263,7 @@ in import pkgs.nix-lib-nmt {
     ./modules/services/window-managers/spectrwm
     ./modules/services/window-managers/sway
     ./modules/services/wlsunset
+    ./modules/services/wob
     ./modules/services/xsettingsd
     ./modules/systemd
     ./modules/targets-linux

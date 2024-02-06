@@ -1383,6 +1383,37 @@ in {
           A new module is available: 'xdg.portal'.
         '';
       }
+
+      {
+        time = "2024-01-20T23:45:07+00:00";
+        message = ''
+          A new module is available: 'programs.mise'.
+
+          This module replaces 'programs.rtx', which has been removed.
+        '';
+      }
+
+      {
+        time = "2024-01-27T22:53:00+00:00";
+        condition = hostPlatform.isLinux;
+        message = ''
+          A new module is available: 'services.wob'.
+        '';
+      }
+
+      {
+        time = "2024-02-05T22:33:54+00:00";
+        message = ''
+          A new module is available: 'services.arrpc'
+        '';
+      }
+
+      {
+        time = "2024-02-05T22:45:37+00:00";
+        message = ''
+          A new module is available: 'programs.jetbrains-remote'
+        '';
+      }
     ];
   };
 }

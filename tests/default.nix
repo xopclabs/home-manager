@@ -88,6 +88,7 @@ in import nmtSrc {
     ./modules/programs/i3status
     ./modules/programs/irssi
     ./modules/programs/jujutsu
+    ./modules/programs/joplin-desktop
     ./modules/programs/k9s
     ./modules/programs/kakoune
     ./modules/programs/khal
@@ -126,6 +127,7 @@ in import nmtSrc {
     ./modules/programs/pyenv
     ./modules/programs/qcal
     ./modules/programs/qutebrowser
+    ./modules/programs/ranger
     ./modules/programs/readline
     ./modules/programs/rio
     ./modules/programs/ripgrep
@@ -134,6 +136,7 @@ in import nmtSrc {
     ./modules/programs/sapling
     ./modules/programs/sbt
     ./modules/programs/scmpuff
+    ./modules/programs/senpai
     ./modules/programs/sftpman
     ./modules/programs/sioyek
     ./modules/programs/sm64ex
@@ -153,6 +156,7 @@ in import nmtSrc {
     ./modules/programs/wezterm
     ./modules/programs/yazi
     ./modules/programs/zellij
+    ./modules/programs/zk
     ./modules/programs/zplug
     ./modules/programs/zsh
     ./modules/services/syncthing/common
@@ -208,6 +212,7 @@ in import nmtSrc {
     ./modules/programs/wpaperd
     ./modules/programs/xmobar
     ./modules/programs/yt-dlp
+    ./modules/services/activitywatch
     ./modules/services/avizo
     ./modules/services/barrier
     ./modules/services/borgmatic

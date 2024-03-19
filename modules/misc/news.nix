@@ -1422,6 +1422,53 @@ in {
           A new module is available: 'wayland.windowManager.river'.
         '';
       }
+
+      {
+        time = "2024-03-08T22:20:04+00:00";
+        message = ''
+          A new module is available: 'programs.zk'
+        '';
+      }
+
+      {
+        time = "2024-03-08T22:23:24+00:00";
+        message = ''
+          A new module is available: 'programs.ranger'.
+        '';
+      }
+
+      {
+        time = "2024-03-13T13:28:22+00:00";
+        message = ''
+          A new module is available: 'programs.joplin-desktop'.
+        '';
+      }
+
+      {
+        time = "2024-03-14T07:22:09+00:00";
+        condition = config.services.gpg-agent.enable;
+        message = ''
+          'services.gpg-agent.pinentryFlavor' has been removed and replaced by
+          'services.gpg-agent.pinentryPackage'.
+        '';
+      }
+
+      {
+        time = "2024-03-14T07:22:59+00:00";
+        condition = config.programs.rbw.enable;
+        message = ''
+          'programs.rbw.pinentry' has been simplified to only accept 'null' or
+          a package.
+        '';
+      }
+
+      {
+        time = "2024-03-15T08:39:52+00:00";
+        condition = hostPlatform.isLinux;
+        message = ''
+          A new module is available: 'services.activitywatch'.
+        '';
+      }
     ];
   };
 }

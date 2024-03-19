@@ -125,6 +125,7 @@ let
     ./programs/jq.nix
     ./programs/jujutsu.nix
     ./programs/joshuto.nix
+    ./programs/joplin-desktop.nix
     ./programs/just.nix
     ./programs/k9s.nix
     ./programs/kakoune.nix
@@ -190,6 +191,7 @@ let
     ./programs/pylint.nix
     ./programs/qcal.nix
     ./programs/qutebrowser.nix
+    ./programs/ranger.nix
     ./programs/rbw.nix
     ./programs/readline.nix
     ./programs/rio.nix
@@ -248,12 +250,14 @@ let
     ./programs/z-lua.nix
     ./programs/zathura.nix
     ./programs/zellij.nix
+    ./programs/zk.nix
     ./programs/zoxide.nix
     ./programs/zplug.nix
     ./programs/zsh.nix
     ./programs/zsh/prezto.nix
     ./programs/zsh/zsh-abbr.nix
     ./services/arrpc.nix
+    ./services/activitywatch.nix
     ./services/autorandr.nix
     ./services/avizo.nix
     ./services/barrier.nix
